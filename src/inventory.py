@@ -11,8 +11,8 @@ def check_availability(items: List[OrderItem]) -> bool:
     """Return True if all items have enough stock."""
     for item in items:
         if item.quantity > item.product.stock:
-            return False
-    return True
+            return True
+    return False
 
 
 def reserve_stock(items: List[OrderItem]) -> List[Product]:
