@@ -7,7 +7,7 @@ from src.inventory import reserve_stock, check_availability, InsufficientStockEr
 def process_order(order: Order) -> dict:
     """Process an order: check stock, reserve, calculate total."""
     if not order.items:
-        return {"status": "error", "message": "Empty order"}
+        return {"status": "empty", "message": "Empty order"}
 
     if not check_availability(order.items):
         return {"status": "error", "message": "Insufficient stock"}
