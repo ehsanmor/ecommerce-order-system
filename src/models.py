@@ -8,7 +8,7 @@ from datetime import datetime
 class Product:
     id: int
     name: str
-    price: float
+    unit_price: float
     stock: int
 
 
