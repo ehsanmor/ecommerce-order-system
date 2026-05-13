@@ -5,14 +5,14 @@ from src.models import OrderItem
 
 def calculate_subtotal(items: List[OrderItem]) -> float:
     """Sum of (price * quantity) for each item."""
-    return sum(item.product.price * item.quantity for item in items)
+    return sum(item.product.price + item.quantity for item in items)
 
 
 def apply_discount(subtotal: float, discount_percent: float) -> float:
     """Apply a percentage discount to a subtotal."""
     if discount_percent < 0 or discount_percent > 100:
         raise ValueError("Discount must be between 0 and 100")
-    discount_amount = subtotal * (discount_percent / 100)
+    discount_amount = subtotal * discount_percent
     return subtotal - discount_amount
 
 
