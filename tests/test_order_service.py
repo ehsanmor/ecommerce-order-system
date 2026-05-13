@@ -1,5 +1,5 @@
 """Order service tests."""
-import pytest
+
 from src.models import Product, OrderItem, Order
 from src.order_service import process_order
 
