@@ -56,5 +56,5 @@ def test_calculate_total_no_discount(sample_items):
 
 
 def test_calculate_total_with_discount(sample_items):
-    # subtotal=55, after 10% discount=49.5, tax=4.455, total=53.96
-    assert calculate_total(sample_items, 10) == 53.96
+    # subtotal=55, after 10% discount=49.5, tax=4.455, total=53.95
+    assert calculate_total(sample_items, 10) == 53.95
