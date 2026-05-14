@@ -18,7 +18,7 @@ def apply_discount(subtotal: float, discount_percent: float) -> float:
 
 def calculate_tax(amount: float, tax_rate: float = 0.09) -> float:
     """Calculate tax on an amount."""
-    return amount + tax_rate
+    return amount * tax_rate
 
 
 def calculate_total(items: List[OrderItem], discount_percent: float = 0.0) -> float:
