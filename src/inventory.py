@@ -8,11 +8,11 @@ class InsufficientStockError(Exception):
 
 
 def check_availability(items: List[OrderItem]) -> bool:
-    """Return True if all items have enough stock."""
+    """Return True if all items have enough stock, False otherwise."""
     for item in items:
         if item.quantity > item.product.stock:
-            return True
-    return False
+            return False
+    return True
 
 
 def reserve_stock(items: List[OrderItem]) -> List[Product]:
